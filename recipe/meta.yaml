@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-mssql" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-microsoft-mssql-{{ version }}.tar.gz
-  sha256: 552ce023ce54955e9d84c46bfc48928f6cc5263c80d660088bf7e5408c7ff33d
+  sha256: 082e061e86817d2a27eb17172c921ea11af0f947b5095c63bf632777ab289ef2
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.0.0
+    - apache-airflow >=2.1.0
     - pymssql >=2.1.5,<2.2.0
     - python >=3.6
 
