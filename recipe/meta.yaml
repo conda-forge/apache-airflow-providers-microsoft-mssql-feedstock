@@ -17,14 +17,13 @@ build:
 
 requirements:
   host:
+    - python >=3.7
     - pip
-    - python >=3.6
     - setuptools
-    - wheel
   run:
+    - python >=3.7
     - apache-airflow >=2.1.0
-    - pymssql >=2.1.5,<2.2.0
-    - python >=3.6
+    - pymssql >=2.1.5
 
 test:
   imports:
