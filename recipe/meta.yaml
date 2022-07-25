@@ -5,24 +5,25 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
+build:
+  skip: true  # [py<37]
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-microsoft-mssql-{{ version }}.tar.gz
   sha256: a982a1e9dfe14ed1581a725197a61bbeddf70256ca1d2bffb111a7c10ed25a7e
 
-build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
-
 requirements:
   host:
-    - python >=3.7
     - pip
+    - python
     - setuptools
   run:
-    - python >=3.7
     - apache-airflow >=2.2.0
+    - apache-airflow-providers-common-sql
     - pymssql >=2.1.5
+    - python
 
 test:
   imports:
