@@ -10,20 +10,20 @@ source:
   sha256: 5073bc2db346b1c51183d9ab0d93f7cebad1748c75ec1518df67a56a12d19d2a
 
 build:
-  noarch: python
+  skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python >=3.7
     - pip
+    - python
     - setuptools
   run:
-    - python >=3.7
     - apache-airflow >=2.2.0
     - apache-airflow-providers-common-sql
     - pymssql >=2.1.5
+    - python
 
 test:
   imports:
