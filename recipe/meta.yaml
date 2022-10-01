@@ -16,14 +16,14 @@ build:
 
 requirements:
   host:
-    - pip
     - python
     - setuptools
+    - pip
   run:
-    - apache-airflow >=2.2.0
-    - apache-airflow-providers-common-sql
-    - pymssql >=2.1.5
     - python
+    - apache-airflow-providers-common-sql >=1.2.0
+    - apache-airflow >=2.2.0
+    - pymssql >=2.1.5
 
 test:
   imports:
