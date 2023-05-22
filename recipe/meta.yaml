@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-mssql" %}
-{% set version = "3.3.2" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-microsoft-mssql-{{ version }}.tar.gz
-  sha256: 603d3221d3f99d4d92d6d08850044cea0b3dfbab0fd7153dc8d9a5f572de22e1
+  sha256: 54cdf05923ebbb024bb7f8a93ce254aa4a2eb7a36e97a25e49ee24454f4e3744
 
 build:
   noarch: python
