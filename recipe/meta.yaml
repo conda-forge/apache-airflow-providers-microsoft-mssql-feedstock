@@ -21,10 +21,10 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.9.0
-    - methodtools >=0.4.7
+    - apache-airflow-providers-common-sql >=1.20.0
     - pymssql >=2.3.0
+    - methodtools >=0.4.7
 
 test:
   imports:
@@ -39,7 +39,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-microsoft-mssql for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/microsoft/mssql/LICENSE
+  license_file: src/airflow/providers/microsoft/mssql/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-microsoft-mssql/stable/index.html
   dev_url: https://github.com/apache/airflow/
