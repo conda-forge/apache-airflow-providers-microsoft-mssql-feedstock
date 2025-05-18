@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-mssql" %}
-{% set version = "4.2.2" %}
+{% set version = "4.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_microsoft_mssql-{{ version }}.tar.gz
-  sha256: 2adf00e0a4b426b50922edaaef01e0bba524310f88e5c1ff97d375960417a8ac
+  sha256: da62fe6faae725576d7591f37a555756283201d52fabcedf169e98474622a0a7
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.9.0
+    - apache-airflow >=2.10.0
     - apache-airflow-providers-common-sql >=1.23.0
     - pymssql >=2.3.0,!=2.3.3
     - methodtools >=0.4.7
