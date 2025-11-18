@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-mssql" %}
-{% set version = "4.3.2" %}
-{% set python_min = "3.10" %}
+{% set version = "4.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_microsoft_mssql-{{ version }}.tar.gz
-  sha256: 4f11765d605205afd2f7288ee92b1f83636757319963a684a0256eb7ca9b2526
+  sha256: b82924807d4bb33a0c30b9699b14730dfda1e46ecb016eb0805aaa4f660ae653
 
 build:
   noarch: python
@@ -40,7 +39,9 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-microsoft-mssql for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/microsoft/mssql/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-microsoft-mssql/stable/index.html
   dev_url: https://github.com/apache/airflow/
