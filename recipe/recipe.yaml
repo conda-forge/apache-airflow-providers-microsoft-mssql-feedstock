@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-microsoft-mssql
-  version: 4.5.0
+  version: "4.5.0"
 
 package:
   name: ${{ name|lower }}
@@ -26,6 +26,7 @@ requirements:
     - apache-airflow-providers-common-sql >=1.32.0
     - pymssql >=2.3.5
     - methodtools >=0.4.7
+
 tests:
   - python:
       imports:
