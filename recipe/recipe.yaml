@@ -24,7 +24,8 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-sql >=1.32.0
-    - pymssql >=2.3.5
+    # more restrictive for python >=3.14
+    - pymssql >=2.3.13
     - methodtools >=0.4.7
 
 tests:
