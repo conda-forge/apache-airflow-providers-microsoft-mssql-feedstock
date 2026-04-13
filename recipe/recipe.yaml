@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-microsoft-mssql
-  version: 4.5.2
+  version: "4.5.2"
 
 package:
   name: ${{ name|lower }}
@@ -24,14 +24,18 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-sql >=1.32.0
-    - pymssql >=2.3.5
+    # more restrictive for python >=3.14
+    - pymssql >=2.3.13
     - methodtools >=0.4.7
+
 tests:
   - python:
       imports:
         - airflow.providers.microsoft.mssql
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/apache/airflow/
