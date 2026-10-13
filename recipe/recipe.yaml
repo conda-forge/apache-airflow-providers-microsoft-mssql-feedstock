@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-microsoft-mssql
-  version: 4.7.1
+  version: "4.7.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_microsoft_mssql-${{ version }}.tar.gz
-  sha256: 87fbf762efe834dbb564ff904078f51ea4081a7fefd10727bec86dcb1d0b22c0
+  sha256: d22b9b4b145a4fa69122f64a0c5e38fb3d6f4c4148664362e81d7b43a0d6c362
 
 build:
   noarch: python
